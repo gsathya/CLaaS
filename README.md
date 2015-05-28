@@ -13,7 +13,7 @@ YOLO
 
 ### Demo
 
-http://gsathya.codesurfers.net/?q=yolo
+http://claas.codesurfers.net/?q=yolo
 
 ### Install
 ```
