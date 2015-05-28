@@ -13,6 +13,7 @@ YOLO
 
 ### Install
 ```
+    $ go get github.com/gsathya/claas
     $ go install github.com/gsathya/claas
     $ claas
 ```
