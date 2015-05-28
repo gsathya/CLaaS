@@ -1,3 +1,8 @@
+// To the extent possible under law, Sathyanarayanan Gunasekaran waived
+// all copyright and related or neighboring rights to CLaaS, using the
+// creative commons "cc0" public domain dedication. See LICENSE or
+// <http://creativecommons.org/publicdomain/zero/1.0/> for full details.
+
 package main
 
 import (
