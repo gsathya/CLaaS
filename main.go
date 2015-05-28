@@ -7,11 +7,13 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
 	queryString := r.FormValue("q")
 	if len(queryString) > 0 {
 		fmt.Fprintf(w, strings.ToUpper(queryString))
