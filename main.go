@@ -17,7 +17,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
 	queryString, err := url.QueryUnescape((r.FormValue("q")))
 	if err != nil {
-		fmt.Fprintf(w, "Try ?q=yolo")
+		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
 	if len(queryString) > 0 {
