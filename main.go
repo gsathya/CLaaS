@@ -9,12 +9,17 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"strings"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
-	queryString := r.FormValue("q")
+	queryString, err := url.QueryUnescape((r.FormValue("q")))
+	if err != nil {
+		fmt.Fprintf(w, "Try ?q=yolo")
+		return
+	}
 	if len(queryString) > 0 {
 		fmt.Fprintf(w, strings.ToUpper(queryString))
 		return
